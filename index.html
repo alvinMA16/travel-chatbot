@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI旅游助手 - 原型设计</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="prototype-container">
+        <h1>AI旅游助手 - 原型设计</h1>
+        <div class="phone-prototypes">
+            <!-- 欢迎界面 -->
+            <div class="phone-frame">
+                <div class="phone-header">
+                    <div class="phone-notch"></div>
+                </div>
+                <div class="phone-content welcome-screen">
+                    <div class="logo-container">
+                        <i class="fas fa-globe-asia main-logo"></i>
+                        <h2>AI旅游助手</h2>
+                        <p>智能规划，畅享旅行</p>
+                    </div>
+                    <div class="welcome-buttons">
+                        <button class="btn primary-btn">开始使用</button>
+                        <button class="btn secondary-btn">登录/注册</button>
+                    </div>
+                </div>
+                <div class="phone-footer">
+                    <div class="home-indicator"></div>
+                </div>
+                <p class="screen-label">欢迎界面</p>
+            </div>
+
+            <!-- 聊天界面 - 初始状态 -->
+            <div class="phone-frame">
+                <div class="phone-header">
+                    <div class="phone-notch"></div>
+                </div>
+                <div class="phone-content chat-screen">
+                    <div class="chat-header">
+                        <div class="back-button">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <div class="chat-title">
+                            <h3>AI旅游助手</h3>
+                            <p class="status">在线</p>
+                        </div>
+                        <div class="header-actions">
+                            <i class="fas fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>您好！我是您的AI旅游助手。请告诉我您的旅行计划，我可以帮您规划行程、推荐景点和餐厅。</p>
+                                <span class="time">10:05</span>
+                            </div>
+                        </div>
+                        <div class="message-suggestions">
+                            <button>北京三日游</button>
+                            <button>周末短途推荐</button>
+                            <button>美食探店</button>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <div class="input-options">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="输入您的旅行需求...">
+                        </div>
+                        <div class="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-footer">
+                    <div class="home-indicator"></div>
+                </div>
+                <p class="screen-label">聊天界面 - 初始状态</p>
+            </div>
+
+            <!-- 聊天界面 - 用户询问 -->
+            <div class="phone-frame">
+                <div class="phone-header">
+                    <div class="phone-notch"></div>
+                </div>
+                <div class="phone-content chat-screen">
+                    <div class="chat-header">
+                        <div class="back-button">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <div class="chat-title">
+                            <h3>AI旅游助手</h3>
+                            <p class="status">正在输入...</p>
+                        </div>
+                        <div class="header-actions">
+                            <i class="fas fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>您好！我是您的AI旅游助手。请告诉我您的旅行计划，我可以帮您规划行程、推荐景点和餐厅。</p>
+                                <span class="time">10:05</span>
+                            </div>
+                        </div>
+                        <div class="message user">
+                            <div class="message-content">
+                                <p>我要去北京出差，周末两天时间有没有推荐的旅行计划</p>
+                                <span class="time">10:06</span>
+                            </div>
+                        </div>
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>您好！北京有很多值得游览的地方。为了给您提供更合适的推荐，请问您的会场地址或者酒店地址在哪里？这样我可以为您规划更便捷的行程。</p>
+                                <span class="time">10:07</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <div class="input-options">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="在东单附近">
+                        </div>
+                        <div class="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-footer">
+                    <div class="home-indicator"></div>
+                </div>
+                <p class="screen-label">聊天界面 - 用户询问</p>
+            </div>
+
+            <!-- 聊天界面 - 位置确认 -->
+            <div class="phone-frame">
+                <div class="phone-header">
+                    <div class="phone-notch"></div>
+                </div>
+                <div class="phone-content chat-screen">
+                    <div class="chat-header">
+                        <div class="back-button">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <div class="chat-title">
+                            <h3>AI旅游助手</h3>
+                            <p class="status">在线</p>
+                        </div>
+                        <div class="header-actions">
+                            <i class="fas fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>您好！我是您的AI旅游助手。请告诉我您的旅行计划，我可以帮您规划行程、推荐景点和餐厅。</p>
+                                <span class="time">10:05</span>
+                            </div>
+                        </div>
+                        <div class="message user">
+                            <div class="message-content">
+                                <p>我要去北京出差，周末两天时间有没有推荐的旅行计划</p>
+                                <span class="time">10:06</span>
+                            </div>
+                        </div>
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>您好！北京有很多值得游览的地方。为了给您提供更合适的推荐，请问您的会场地址或者酒店地址在哪里？这样我可以为您规划更便捷的行程。</p>
+                                <span class="time">10:07</span>
+                            </div>
+                        </div>
+                        <div class="message user">
+                            <div class="message-content">
+                                <p>在东单附近</p>
+                                <span class="time">10:08</span>
+                            </div>
+                        </div>
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>谢谢您的信息！东单是北京市中心的一个重要商圈，周边有许多景点。根据天气预报，本周末北京晴朗，适合外出游览。</p>
+                                <p>以下是您附近值得游览的景点：</p>
+                                <ul class="location-list">
+                                    <li><i class="fas fa-map-marker-alt"></i> 天安门广场 (步行约15分钟)</li>
+                                    <li><i class="fas fa-map-marker-alt"></i> 故宫博物院 (步行约20分钟)</li>
+                                    <li><i class="fas fa-map-marker-alt"></i> 王府井商业街 (步行约10分钟)</li>
+                                    <li><i class="fas fa-map-marker-alt"></i> 景山公园 (公交约15分钟)</li>
+                                    <li><i class="fas fa-map-marker-alt"></i> 天坛公园 (地铁约20分钟)</li>
+                                </ul>
+                                <p>您对这些景点有什么偏好吗？或者有特别想尝试的美食种类吗？</p>
+                                <span class="time">10:10</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <div class="input-options">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="我想安排故宫和王府井，喜欢北京特色小吃">
+                        </div>
+                        <div class="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-footer">
+                    <div class="home-indicator"></div>
+                </div>
+                <p class="screen-label">聊天界面 - 位置确认与景点推荐</p>
+            </div>
+
+            <!-- 聊天界面 - 行程推荐 -->
+            <div class="phone-frame">
+                <div class="phone-header">
+                    <div class="phone-notch"></div>
+                </div>
+                <div class="phone-content chat-screen">
+                    <div class="chat-header">
+                        <div class="back-button">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <div class="chat-title">
+                            <h3>AI旅游助手</h3>
+                            <p class="status">在线</p>
+                        </div>
+                        <div class="header-actions">
+                            <i class="fas fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="message user">
+                            <div class="message-content">
+                                <p>我想安排故宫和王府井，喜欢北京特色小吃</p>
+                                <span class="time">10:12</span>
+                            </div>
+                        </div>
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>非常好！根据您的偏好和天气预报，我为您规划了两天的行程：</p>
+                                <span class="time">10:13</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 行程卡片 - 第一天 -->
+                        <div class="itinerary-card">
+                            <div class="itinerary-header">
+                                <div class="itinerary-title">周末行程安排</div>
+                                <div class="itinerary-day">第一天</div>
+                            </div>
+                            <div class="weather-info">
+                                <i class="fas fa-sun"></i> 晴朗 26°C/18°C
+                            </div>
+                            <div class="itinerary-timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-time">9:00 - 12:30</div>
+                                    <div class="timeline-content">故宫博物院参观</div>
+                                    <div class="timeline-location">
+                                        <i class="fas fa-map-marker-alt"></i> 北京市东城区景山前街4号
+                                    </div>
+                                    <div class="timeline-transport">
+                                        <i class="fas fa-walking"></i> 从东单步行20分钟或乘坐地铁1号线
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">12:30 - 14:00</div>
+                                    <div class="timeline-content">午餐 @ 老舍茶馆</div>
+                                    <div class="timeline-location">
+                                        <i class="fas fa-map-marker-alt"></i> 北京市西城区前门西大街正阳市场3号楼
+                                    </div>
+                                    <div class="timeline-transport">
+                                        <i class="fas fa-bus"></i> 从故宫乘坐公交2路，约15分钟
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">14:30 - 17:00</div>
+                                    <div class="timeline-content">王府井商业街购物与美食</div>
+                                    <div class="timeline-location">
+                                        <i class="fas fa-map-marker-alt"></i> 北京市东城区王府井大街
+                                    </div>
+                                    <div class="timeline-transport">
+                                        <i class="fas fa-subway"></i> 乘坐地铁1号线，约10分钟
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">17:30 - 19:30</div>
+                                    <div class="timeline-content">晚餐 @ 全聚德烤鸭店</div>
+                                    <div class="timeline-location">
+                                        <i class="fas fa-map-marker-alt"></i> 王府井大街前门店
+                                    </div>
+                                    <div class="timeline-transport">
+                                        <i class="fas fa-walking"></i> 步行5分钟
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>第二天的行程规划如下：</p>
+                                <span class="time">10:14</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 行程卡片 - 第二天 -->
+                        <div class="itinerary-card">
+                            <div class="itinerary-header">
+                                <div class="itinerary-title">周末行程安排</div>
+                                <div class="itinerary-day">第二天</div>
+                            </div>
+                            <div class="weather-info">
+                                <i class="fas fa-cloud-sun"></i> 多云 24°C/17°C
+                            </div>
+                            <div class="itinerary-timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-time">9:30 - 11:30</div>
+                                    <div class="timeline-content">天坛公园游览</div>
+                                    <div class="timeline-location">
+                                        <i class="fas fa-map-marker-alt"></i> 北京市东城区天坛路
+                                    </div>
+                                    <div class="timeline-transport">
+                                        <i class="fas fa-subway"></i> 乘坐地铁5号线，约15分钟
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">12:00 - 13:30</div>
+                                    <div class="timeline-content">午餐 @ 护国寺小吃</div>
+                                    <div class="timeline-location">
+                                        <i class="fas fa-map-marker-alt"></i> 北京市西城区护国寺街
+                                    </div>
+                                    <div class="timeline-transport">
+                                        <i class="fas fa-bus"></i> 乘坐公交，约20分钟
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">14:00 - 16:30</div>
+                                    <div class="timeline-content">南锣鼓巷漫步</div>
+                                    <div class="timeline-location">
+                                        <i class="fas fa-map-marker-alt"></i> 北京市东城区南锣鼓巷
+                                    </div>
+                                    <div class="timeline-transport">
+                                        <i class="fas fa-walking"></i> 步行10分钟
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">17:00 - 18:30</div>
+                                    <div class="timeline-content">后海酒吧街休闲</div>
+                                    <div class="timeline-location">
+                                        <i class="fas fa-map-marker-alt"></i> 北京市西城区后海
+                                    </div>
+                                    <div class="timeline-transport">
+                                        <i class="fas fa-walking"></i> 步行15分钟
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>这个行程安排考虑了您的位置、景点偏好和美食需求。您可以根据实际情况调整时间。</p>
+                                <p>请问这个行程安排您满意吗？或者您希望做一些调整？</p>
+                                <span class="time">10:15</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <div class="input-options">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="第一天能否改为故宫半天就够了">
+                        </div>
+                        <div class="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-footer">
+                    <div class="home-indicator"></div>
+                </div>
+                <p class="screen-label">聊天界面 - 行程推荐</p>
+            </div>
+
+            <!-- 聊天界面 - 行程调整 -->
+            <div class="phone-frame">
+                <div class="phone-header">
+                    <div class="phone-notch"></div>
+                </div>
+                <div class="phone-content chat-screen">
+                    <div class="chat-header">
+                        <div class="back-button">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <div class="chat-title">
+                            <h3>AI旅游助手</h3>
+                            <p class="status">在线</p>
+                        </div>
+                        <div class="header-actions">
+                            <i class="fas fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="message user">
+                            <div class="message-content">
+                                <p>第一天能否改为故宫半天就够了，下午想去北海公园</p>
+                                <span class="time">10:16</span>
+                            </div>
+                        </div>
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>没问题！我已为您调整了第一天的行程，缩短了故宫的游览时间并增加了北海公园：</p>
+                                <span class="time">10:17</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 调整后的行程卡片 -->
+                        <div class="itinerary-card">
+                            <div class="itinerary-header">
+                                <div class="itinerary-title">调整后的行程</div>
+                                <div class="itinerary-day">第一天</div>
+                            </div>
+                            <div class="weather-info">
+                                <i class="fas fa-sun"></i> 晴朗 26°C/18°C
+                            </div>
+                            <div class="itinerary-timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-time">9:00 - 11:30</div>
+                                    <div class="timeline-content">故宫博物院参观</div>
+                                    <div class="timeline-location">
+                                        <i class="fas fa-map-marker-alt"></i> 北京市东城区景山前街4号
+                                    </div>
+                                    <div class="timeline-transport">
+                                        <i class="fas fa-walking"></i> 从东单步行20分钟或乘坐地铁1号线
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">12:00 - 13:30</div>
+                                    <div class="timeline-content">午餐 @ 老舍茶馆</div>
+                                    <div class="timeline-location">
+                                        <i class="fas fa-map-marker-alt"></i> 北京市西城区前门西大街正阳市场3号楼
+                                    </div>
+                                    <div class="timeline-transport">
+                                        <i class="fas fa-bus"></i> 从故宫乘坐公交2路，约15分钟
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">14:00 - 16:30</div>
+                                    <div class="timeline-content">北海公园游览</div>
+                                    <div class="timeline-location">
+                                        <i class="fas fa-map-marker-alt"></i> 北京市西城区文津街1号
+                                    </div>
+                                    <div class="timeline-transport">
+                                        <i class="fas fa-bus"></i> 乘坐公交5路，约12分钟
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-time">17:00 - 19:00</div>
+                                    <div class="timeline-content">王府井商业街与晚餐</div>
+                                    <div class="timeline-location">
+                                        <i class="fas fa-map-marker-alt"></i> 北京市东城区王府井大街
+                                    </div>
+                                    <div class="timeline-transport">
+                                        <i class="fas fa-subway"></i> 乘坐地铁6号线转1号线，约20分钟
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>第二天的行程保持不变。北海公园是一个非常美丽的皇家园林，您可以在那里欣赏到美丽的湖景和建筑。</p>
+                                <p>您对这个调整后的行程满意吗？还有其他想调整的地方吗？</p>
+                                <span class="time">10:18</span>
+                            </div>
+                        </div>
+                        
+                        <div class="message user">
+                            <div class="message-content">
+                                <p>很满意，我还想知道这些景点有什么特别推荐的美食吗？</p>
+                                <span class="time">10:19</span>
+                            </div>
+                        </div>
+                        
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>当然可以！在您的行程中，我推荐以下特色美食：</p>
+                                <ul class="food-recommendations">
+                                    <li><i class="fas fa-utensils"></i> <strong>故宫附近：</strong> 御膳房（复制清宫菜）、旁边的角楼餐厅（宫廷风格）</li>
+                                    <li><i class="fas fa-utensils"></i> <strong>北海公园：</strong> 公园内的"荷花餐厅"提供传统北京小吃</li>
+                                    <li><i class="fas fa-utensils"></i> <strong>王府井：</strong> 小吃街有冰糖葫芦、炒肝、豆汁、驴打滚等传统小吃</li>
+                                    <li><i class="fas fa-utensils"></i> <strong>南锣鼓巷：</strong> 文宇奶酪、卤煮火烧、爆肚张等老字号</li>
+                                    <li><i class="fas fa-utensils"></i> <strong>后海：</strong> 烤肉季（老北京烤肉）、芥末墩（创意中餐）</li>
+                                </ul>
+                                <p>您有特别喜欢的口味吗？例如偏辣、偏甜或者清淡等？我可以更有针对性地推荐。</p>
+                                <span class="time">10:20</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <div class="input-options">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="我喜欢稍微辣一点的，谢谢推荐！">
+                        </div>
+                        <div class="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-footer">
+                    <div class="home-indicator"></div>
+                </div>
+                <p class="screen-label">聊天界面 - 行程调整与美食推荐</p>
+            </div>
+
+            <!-- 行程共享界面 -->
+            <div class="phone-frame">
+                <div class="phone-header">
+                    <div class="phone-notch"></div>
+                </div>
+                <div class="phone-content chat-screen">
+                    <div class="chat-header">
+                        <div class="back-button">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <div class="chat-title">
+                            <h3>AI旅游助手</h3>
+                            <p class="status">在线</p>
+                        </div>
+                        <div class="header-actions">
+                            <i class="fas fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="message user">
+                            <div class="message-content">
+                                <p>我喜欢稍微辣一点的，谢谢推荐！</p>
+                                <span class="time">10:21</span>
+                            </div>
+                        </div>
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>既然您喜欢稍微辣一点的，我为您增加了几个推荐：</p>
+                                <ul class="food-recommendations">
+                                    <li><i class="fas fa-pepper-hot"></i> <strong>老舍茶馆：</strong> 尝试他们的辣味四季豆和麻辣鸭舌</li>
+                                    <li><i class="fas fa-pepper-hot"></i> <strong>王府井：</strong> 五香脆皮猪肉和麻辣烫小吃</li>
+                                    <li><i class="fas fa-pepper-hot"></i> <strong>护国寺小吃：</strong> 京味辣椒油豆腐和爆肚</li>
+                                    <li><i class="fas fa-pepper-hot"></i> <strong>南锣鼓巷：</strong> 四川风味的担担面和辣子鸡</li>
+                                </ul>
+                                <p>您的两天行程已经规划完毕。我可以为您生成一份完整的行程单，方便您随时查看。</p>
+                                <span class="time">10:22</span>
+                            </div>
+                        </div>
+                        
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <div class="share-card">
+                                    <div class="share-header">
+                                        <i class="fas fa-calendar-check"></i>
+                                        <h3>北京周末行程</h3>
+                                    </div>
+                                    <div class="share-content">
+                                        <p>为您定制的2天北京行程已生成</p>
+                                        <div class="share-preview">
+                                            <div class="preview-day">第1天</div>
+                                            <div class="preview-items">
+                                                <div class="preview-item">故宫博物院</div>
+                                                <div class="preview-item">北海公园</div>
+                                                <div class="preview-item">王府井商业街</div>
+                                            </div>
+                                            <div class="preview-day">第2天</div>
+                                            <div class="preview-items">
+                                                <div class="preview-item">天坛公园</div>
+                                                <div class="preview-item">南锣鼓巷</div>
+                                                <div class="preview-item">后海酒吧街</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="share-actions">
+                                        <button class="share-btn"><i class="fas fa-download"></i> 保存行程</button>
+                                        <button class="share-btn"><i class="fas fa-share-alt"></i> 分享</button>
+                                    </div>
+                                </div>
+                                <span class="time">10:23</span>
+                            </div>
+                        </div>
+                        
+                        <div class="message bot">
+                            <div class="avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>您的行程已经生成。如果您有任何其他问题或需要调整，随时告诉我！祝您在北京玩得愉快！</p>
+                                <span class="time">10:24</span>
+                            </div>
+                        </div>
+                        
+                        <div class="message-suggestions">
+                            <button>如何前往故宫？</button>
+                            <button>行程调整</button>
+                            <button>紧急联系电话</button>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <div class="input-options">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="非常感谢，行程很完美！">
+                        </div>
+                        <div class="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-footer">
+                    <div class="home-indicator"></div>
+                </div>
+                <p class="screen-label">聊天界面 - 行程共享</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

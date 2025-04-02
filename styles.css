@@ -1,0 +1,425 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    padding: 2rem;
+    color: #333;
+}
+
+.prototype-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.phone-prototypes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* 手机框架样式 */
+.phone-frame {
+    width: 340px;
+    height: 680px;
+    background-color: #fff;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 10px solid #111;
+    margin-bottom: 3rem;
+}
+
+.phone-header {
+    height: 30px;
+    background-color: #111;
+    position: relative;
+}
+
+.phone-notch {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    background-color: #111;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.phone-content {
+    height: calc(100% - 60px);
+    overflow: hidden;
+    position: relative;
+}
+
+.phone-footer {
+    height: 30px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-indicator {
+    width: 120px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 3px;
+}
+
+.screen-label {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+}
+
+/* 欢迎界面样式 */
+.welcome-screen {
+    background: linear-gradient(135deg, #4ca5ff 0%, #1a44c2 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.logo-container {
+    margin-bottom: 4rem;
+}
+
+.main-logo {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.welcome-screen h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-buttons {
+    width: 100%;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.primary-btn {
+    background-color: white;
+    color: #1a44c2;
+}
+
+.secondary-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* 聊天界面样式 */
+.chat-screen {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f5f7fa;
+}
+
+.chat-header {
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+}
+
+.back-button {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    color: #1a44c2;
+}
+
+.chat-title {
+    flex: 1;
+}
+
+.chat-title h3 {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+.status {
+    font-size: 0.8rem;
+    color: #4caf50;
+}
+
+.header-actions {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.message {
+    display: flex;
+    max-width: 80%;
+    margin-bottom: 1rem;
+}
+
+.message.bot {
+    align-self: flex-start;
+}
+
+.message.user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #1a44c2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.message-content {
+    background-color: white;
+    padding: 12px 15px;
+    border-radius: 18px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.message.user .message-content {
+    background-color: #1a44c2;
+    color: white;
+}
+
+.message-content p {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.time {
+    font-size: 0.7rem;
+    color: #999;
+    align-self: flex-end;
+    display: block;
+}
+
+.message.user .time {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.message-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.message-suggestions button {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #1a44c2;
+    cursor: pointer;
+}
+
+.chat-input {
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #eee;
+}
+
+.input-options, .send-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1a44c2;
+    font-size: 1.2rem;
+}
+
+.input-field {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    font-size: 1rem;
+    background-color: #f5f7fa;
+}
+
+/* 行程可视化样式 */
+.itinerary-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.itinerary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.itinerary-title {
+    font-weight: bold;
+    color: #1a44c2;
+}
+
+.itinerary-day {
+    background-color: #1a44c2;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.itinerary-timeline {
+    margin-left: 12px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.itinerary-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ddd;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #1a44c2;
+    border: 2px solid white;
+}
+
+.timeline-time {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.timeline-content {
+    font-size: 0.9rem;
+}
+
+.timeline-transport {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 0.8rem;
+    margin: 5px 0;
+}
+
+.timeline-transport i {
+    margin-right: 5px;
+}
+
+.timeline-location {
+    color: #666;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-location i {
+    margin-right: 5px;
+    color: #e74c3c;
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.weather-info i {
+    margin-right: 5px;
+    color: #f39c12;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .phone-prototypes {
+        flex-direction: column;
+        align-items: center;
+    }
+} 
