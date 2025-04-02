@@ -484,6 +484,12 @@ ul, li {
     font-size: 0.85rem;
 }
 
+/* Add indentation to all ul elements */
+ul {
+    padding-left: 20px; /* Adds indentation to the right of ul elements */
+    margin: 5px 0; /* Add some vertical margin for better spacing */
+}
+
 /* Ensure food recommendations and location lists have consistent styling */
 .food-recommendations li, .location-list li {
     margin-bottom: 4px;
